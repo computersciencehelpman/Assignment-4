@@ -4,9 +4,9 @@ public class Student implements Comparable<Student>{
 	private String studentID;
 	private String studentName;
 	private String course;
-	private int grade;
+	private String grade;
 	
-	Student(String studentID, String studentName, String course, int grade){
+	Student(String studentID, String studentName, String course, String grade){
 		
 		this.studentID = studentID;
 		this.studentName = studentName;
@@ -33,20 +33,22 @@ public class Student implements Comparable<Student>{
 	public void setCourse(String course) {
 		this.course = course;
 	}
-	public int getGrade() {
+	public String getGrade() {
 		return grade;
 	}
-	public void setGrade(int grade) {
+	public void setGrade(String grade) {
 		this.grade = grade;
 	}
 
 	
 	
-	
-	public int compareTo(Integer that) {
+	@Override
+	public int compareTo(Student that) {
 		
-		return this.getGrade().compareTo(that.getGrade());
+		return that.grade.compareTo(this.grade);
 	}
+
+	
 	
 	
 	
