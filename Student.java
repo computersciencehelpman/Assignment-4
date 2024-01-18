@@ -42,6 +42,13 @@ public class Student implements Comparable<Student>{
 
 	
 	
+	
+	@Override
+	public String toString() {
+		return "Student [studentID=" + studentID + ", studentName=" + studentName + ", course=" + course + ", grade="
+				+ grade + "]";
+	}
+
 	@Override
 	public int compareTo(Student that) {
 		

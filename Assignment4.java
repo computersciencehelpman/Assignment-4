@@ -55,19 +55,56 @@ public class Assignment4 {
 			
 			
 			if(student.getCourse().contains("COMPSCI")) {
-				compSciStudents[i] = student;
-				System.out.println(compSciStudents[i]);
+				
+				try(BufferedWriter writer = new BufferedWriter(new FileWriter("course1.csv"))) {
+					compSciStudents[i] = student;
+					//System.out.println(compSciStudents[i].toString());
+					
+					
+					
+					
+					
+					writer.write(compSciStudents[i].toString());
+					writer.newLine();
+				}
+				catch (IOException e){
+					e.printStackTrace();
+				}
+				
 				i++;
+				
 				
 			}
 			
 			if(student.getCourse().contains("APMTH")) {
-				apMathStudents[j] = student;
+				
+				try(BufferedWriter writer = new BufferedWriter(new FileWriter("course2.csv"))) {
+					apMathStudents[i] = student;
+					
+					writer.write(apMathStudents[j].toString());
+					writer.newLine();
+				}
+				catch(IOException e){
+					e.printStackTrace();
+				}
+				
+				
 				j++;
 			}
 			
 			if(student.getCourse().contains("STAT")) {
-				stat[k] = student;
+				
+				try(BufferedWriter writer = new BufferedWriter(new FileWriter("course3.csv"))){
+					stat[k] = student;
+					
+					writer.write(stat[k].toString());
+					writer.newLine();
+				}
+				catch(IOException e) {
+					e.printStackTrace();
+				}
+				
+				
 				k++;
 			}
 			
