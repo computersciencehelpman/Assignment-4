@@ -56,7 +56,7 @@ public class Assignment4 {
 			
 			if(student.getCourse().contains("COMPSCI")) {
 				
-				try(BufferedWriter writer = new BufferedWriter(new FileWriter("course1.csv"))) {
+				try(BufferedWriter writer = new BufferedWriter(new FileWriter("course1.csv", true))) {
 					compSciStudents[i] = student;
 					//System.out.println(compSciStudents[i].toString());
 					
@@ -78,8 +78,8 @@ public class Assignment4 {
 			
 			if(student.getCourse().contains("APMTH")) {
 				
-				try(BufferedWriter writer = new BufferedWriter(new FileWriter("course2.csv"))) {
-					apMathStudents[i] = student;
+				try(BufferedWriter writer = new BufferedWriter(new FileWriter("course2.csv", true))) {
+					apMathStudents[j] = student;
 					
 					writer.write(apMathStudents[j].toString());
 					writer.newLine();
@@ -94,7 +94,7 @@ public class Assignment4 {
 			
 			if(student.getCourse().contains("STAT")) {
 				
-				try(BufferedWriter writer = new BufferedWriter(new FileWriter("course3.csv"))){
+				try(BufferedWriter writer = new BufferedWriter(new FileWriter("course3.csv", true))){
 					stat[k] = student;
 					
 					writer.write(stat[k].toString());
